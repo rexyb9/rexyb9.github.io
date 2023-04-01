@@ -5,5 +5,5 @@ if ((console.log.length = 4)) {
 }
 
 const coba = () => {
-  console.log("coba");
+  console.log("coa");
 };
