@@ -209,9 +209,50 @@
 
       <section id="my-keyboards">
         <div class="container">
-          <div class="row">
+          <div class="row text-center mb-3">
             <div class="col">
               <h2>My Keyboards</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Keychron K2</h4>
+                <img
+                  src="img/keyboards/3.png"
+                  alt="Keychron K3"
+                  class="keyboard-img"
+                />
+                <a href="#" class="btn btn-light keyboard-detail-button"
+                  >Show Details</a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Womier RGB</h4>
+                <img
+                  src="img/keyboards/1.png"
+                  alt="Womier RGB"
+                  class="keyboard-img"
+                />
+                <a href="#" class="btn btn-light keyboard-detail-button"
+                  >Show Details</a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Red Dragon</h4>
+                <img
+                  src="img/keyboards/2.png"
+                  alt="Red Dragon"
+                  class="keyboard-img"
+                />
+                <a href="#" class="btn btn-light keyboard-detail-button"
+                  >Show Details</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -345,29 +386,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
     <script>
-      gsap.registerPlugin(TextPlugin);
-      gsap.to(".lead", {
-        duration: 2,
-        delay: 1.5,
-        text: "Make Website And Publish Website | Web Developer",
-      });
-      gsap.from(".jumbotron img", {
-        duration: 1,
-        rotateY: 360,
-        opacity: 0,
-      });
+      gsap.from(".img-thumbnail", { duration: 2, rotationX: 360 });
       gsap.from(".navbar", {
         duration: 1.5,
-        y: "-100%",
         opacity: 0,
+        y: "-100%",
         ease: "bounce",
       });
-      gsap.from(".display-4", {
-        duration: 1,
-        x: -50,
-        opacity: 0,
-        delay: 0.5,
-        ease: "back",
+      gsap.from(".display-4", { delay: 1, duration: 1, opacity: 0, x: "-10%" });
+
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", {
+        delay: 1.5,
+        duration: 2,
+        text: "Make Website And Publish Website | Web Developer",
+      });
+
+      const galleryImages = document.querySelectorAll(".gallery-img");
+      const delayTimes = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450];
+
+      function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var temp = array[i];
+          array[i] = array[j];
+          array[j] = temp;
+        }
+        return array;
+      }
+      const newDelay = shuffleArray(delayTimes);
+      galleryImages.forEach((img, i) => {
+        img.dataset.aos = "fade-up";
+        img.dataset.aosDelay = i * 50 + "";
+        // img.dataset.aosDelay = newDelay[i];
+      });
+
+      AOS.init({
+        once: true,
+        duration: 3000,
       });
     </script>
 
@@ -397,6 +453,15 @@
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
+        max: 35,
+        speed: 1000,
+        glare: true,
       });
     </script>
   </body>
