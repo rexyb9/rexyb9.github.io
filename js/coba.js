@@ -1,4 +1,4 @@
-if (coba === true) {
+if (coba() === true) {
   console.log("berhasil");
 } else {
   console.error("gagal");
