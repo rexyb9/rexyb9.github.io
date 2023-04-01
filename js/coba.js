@@ -1,7 +1,7 @@
-if (coba == true) {
+if (coba === true) {
   console.log("berhasil");
 } else {
-  console.log("coba reload halaman ini!");
+  console.error("gagal");
 }
 
 const coba = () => {};
