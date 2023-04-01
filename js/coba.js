@@ -1,4 +1,4 @@
-if ((console.log.length = 4)) {
+if (console.log.length === 4) {
   console.log("berhasil");
 } else {
   console.error("gagal");
