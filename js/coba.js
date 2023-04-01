@@ -1,9 +1,7 @@
-if (console.log.length === 4) {
+if (coba === true) {
   console.log("berhasil");
 } else {
   console.error("gagal");
 }
 
-const coba = () => {
-  console.log("coa");
-};
+const coba = () => {};
