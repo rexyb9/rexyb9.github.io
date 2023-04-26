@@ -1,604 +1,499 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
-    />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
 
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <title>My Portfolio | Arkha Hamizan</title>
-  </head>
-  <body id="home">
-    <!-- navbar -->
-    <nav
-      class="navbar navbar-expand-lg shadow-sm fixed-top"
-      style="background: var(--bs-body-bg)"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="/">Arkha Hamizan</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item dropdown">
-              <button
-                class="btn nav-link dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i
-                  class="bi bi-sun-fill theme-icon-active"
-                  data-theme-icon-active="bi-sun-fill"
-                ></i>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li>
-                  <button
-                    class="dropdown-item d-flex align-items-center"
-                    type="button"
-                    data-bs-theme-value="light"
-                  >
-                    <i
-                      class="bi bi-sun-fill me-2 opacity-50"
-                      data-theme-icon="bi-sun-fill"
-                    ></i>
-                    Light
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="dropdown-item d-flex align-items-center"
-                    type="button"
-                    data-bs-theme-value="dark"
-                  >
-                    <i
-                      class="bi bi-moon-stars-fill me-2 opacity-50"
-                      data-theme-icon="bi-moon-stars-fill"
-                    ></i>
-                    Dark
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="dropdown-item d-flex align-items-center"
-                    type="button"
-                    data-bs-theme-value="auto"
-                  >
-                    <i
-                      class="bi bi-circle-half me-2 opacity-50"
-                      data-theme-icon="bi-circle-half"
-                    ></i>
-                    Auto
-                  </button>
-                </li>
-              </ul>
-            </li>
-          </ul>
+  <link rel="stylesheet" href="style.css" />
+
+  <title>My Portfolio | Arkha Hamizan</title>
+</head>
+
+<body id="home">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+    </symbol>
+  </svg>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm fixed-top" style="background: var(--bs-body-bg)">
+    <div class="container">
+      <a class="navbar-brand" href="#">Arkha Hamizan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+
+            <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme"
+              type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+              <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+              </svg>
+              <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                  aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                    <use href="#sun-fill"></use>
+                  </svg>
+                  Light
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                    <use href="#check2"></use>
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                  aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                    <use href="#moon-stars-fill"></use>
+                  </svg>
+                  Dark
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                    <use href="#check2"></use>
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                  aria-pressed="true">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                    <use href="#circle-half"></use>
+                  </svg>
+                  Auto
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                    <use href="#check2"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- akhir navbar -->
+
+  <!-- jumbroton -->
+  <section class="jumbotron text-center">
+    <img src="./img/Arkha.jpg" alt="Arkha Hamizan" width="200" class="rounded-circle img-thumbnail" />
+    <h1 class="display-4">Arkha Hamizan</h1>
+    <p class="lead"></p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffff" fill-opacity="1"
+        d="M0,128L48,154.7C96,181,192,235,288,256C384,277,480,267,576,224C672,181,768,107,864,101.3C960,96,1056,160,1152,170.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+  <!-- akhir jumbroton -->
+
+  <!-- about -->
+  <section id="about">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>About Me</h2>
         </div>
       </div>
-    </nav>
-    <!-- akhir navbar -->
-
-    <!-- jumbroton -->
-    <section class="jumbotron text-center">
-      <img
-        src="./img/Arkha.jpg"
-        alt="Arkha Hamizan"
-        width="200"
-        class="rounded-circle img-thumbnail"
-      />
-      <h1 class="display-4">Arkha Hamizan</h1>
-      <p class="lead"></p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffff"
-          fill-opacity="1"
-          d="M0,128L48,154.7C96,181,192,235,288,256C384,277,480,267,576,224C672,181,768,107,864,101.3C960,96,1056,160,1152,170.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- akhir jumbroton -->
-
-    <!-- about -->
-    <section id="about">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>About Me</h2>
-          </div>
+      <div class="row justify-content-center fs-5 text-center">
+        <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+            libero laborum eius laboriosam eum beatae. Provident magnam sint
+            quod voluptas.
+          </p>
         </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-              libero laborum eius laboriosam eum beatae. Provident magnam sint
-              quod voluptas.
-            </p>
-          </div>
-          <div class="col-md-4" data-aos="fade-left">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
-              eligendi nesciunt necessitatibus, saepe magnam minus neque vitae
-              tempore, non officiis iure officia expedita pariatur libero!
-            </p>
-          </div>
+        <div class="col-md-4" data-aos="fade-left">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+            eligendi nesciunt necessitatibus, saepe magnam minus neque vitae
+            tempore, non officiis iure officia expedita pariatur libero!
+          </p>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#e2edff"
-          fill-opacity="1"
-          d="M0,64L48,96C96,128,192,192,288,192C384,192,480,128,576,117.3C672,107,768,149,864,154.7C960,160,1056,128,1152,144C1248,160,1344,224,1392,256L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- akhir about -->
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#e2edff" fill-opacity="1"
+        d="M0,64L48,96C96,128,192,192,288,192C384,192,480,128,576,117.3C672,107,768,149,864,154.7C960,160,1056,128,1152,144C1248,160,1344,224,1392,256L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+  <!-- akhir about -->
 
-    <!-- projets -->
-    <section id="projects">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>My Projects</h2>
+  <!-- projets -->
+  <section id="projects">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>My Projects</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+          <div class="card" data-aos="flip-left" data-aos-duration="500">
+            <img src="./img/projects/1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-duration="500">
-              <img src="./img/projects/1.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
+        <div class="col-md-4 mb-3">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
+            <img src="./img/projects/2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div
-              class="card"
-              data-aos="flip-left"
-              data-aos-duration="500"
-              data-aos-delay="100"
-            >
-              <img src="./img/projects/2.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
+            <img src="./img/projects/3.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div
-              class="card"
-              data-aos="flip-left"
-              data-aos-duration="500"
-              data-aos-delay="200"
-            >
-              <img src="./img/projects/3.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" data-aos="flip-left">
+            <img src="./img/projects/4.jpg" class="card-img-top" alt="..." data-aos-duration="500"
+              data-aos-delay="300" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card" data-aos="flip-left">
-              <img
-                src="./img/projects/4.jpg"
-                class="card-img-top"
-                alt="..."
-                data-aos-duration="500"
-                data-aos-delay="300"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div
-              class="card"
-              data-aos="flip-left"
-              data-aos-duration="500"
-              data-aos-delay="400"
-            >
-              <img src="./img/projects/5.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
+            <img src="./img/projects/5.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <section id="my-keyboards">
-        <div class="container">
-          <div class="row text-center mb-3">
-            <div class="col">
-              <h2>My Keyboards</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-3">
-              <div class="keyboard-box">
-                <h4 class="keyboard-name">Keychron K2</h4>
-                <img
-                  src="img/keyboards/3.png"
-                  alt="Keychron K3"
-                  class="keyboard-img"
-                />
-                <a href="#" class="btn btn-light keyboard-detail-button"
-                  >Show Details</a
-                >
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-              <div class="keyboard-box">
-                <h4 class="keyboard-name">Womier RGB</h4>
-                <img
-                  src="img/keyboards/1.png"
-                  alt="Womier RGB"
-                  class="keyboard-img"
-                />
-                <a href="#" class="btn btn-light keyboard-detail-button"
-                  >Show Details</a
-                >
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-3">
-              <div class="keyboard-box">
-                <h4 class="keyboard-name">Red Dragon</h4>
-                <img
-                  src="img/keyboards/2.png"
-                  alt="Red Dragon"
-                  class="keyboard-img"
-                />
-                <a href="#" class="btn btn-light keyboard-detail-button"
-                  >Show Details</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,288L48,272C96,256,192,224,288,218.7C384,213,480,235,576,234.7C672,235,768,213,864,186.7C960,160,1056,128,1152,133.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- akhir projets -->
-
-    <!-- contact -->
-    <section id="contact">
+    <section id="my-keyboards">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Contact Me</h2>
+            <h2>My Keyboards</h2>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div
-              class="alert alert-success alert-dismissible fade show d-none my-alert"
-              role="alert"
-            >
-              <strong>Terimakasih!</strong> Pesan Anda Sudah Kami Terima.
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="alert"
-                aria-label="Close"
-              ></button>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="keyboard-box">
+              <h4 class="keyboard-name">Keychron K2</h4>
+              <img src="img/keyboards/3.png" alt="Keychron K3" class="keyboard-img" />
+              <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
             </div>
-            <form name="ar-contact-form">
-              <div class="mb-3">
-                <label for="name" class="form-label">Nama Lengkap</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  aria-describedby="name"
-                  name="nama"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="email"
-                  name="email"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
-                <textarea
-                  class="form-control"
-                  id="pesan"
-                  rows="3"
-                  name="pesan"
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-kirim">
-                Kirim
-              </button>
-              <button
-                class="btn btn-primary btn-loading d-none"
-                type="button"
-                disabled
-              >
-                <span
-                  class="spinner-border spinner-border-sm"
-                  role="status"
-                  aria-hidden="true"
-                ></span>
-                Loading...
-              </button>
-            </form>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="keyboard-box">
+              <h4 class="keyboard-name">Womier RGB</h4>
+              <img src="img/keyboards/1.png" alt="Womier RGB" class="keyboard-img" />
+              <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="keyboard-box">
+              <h4 class="keyboard-name">Red Dragon</h4>
+              <img src="img/keyboards/2.png" alt="Red Dragon" class="keyboard-img" />
+              <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+            </div>
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#0d6efd"
-          fill-opacity="1"
-          d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,240C672,213,768,139,864,117.3C960,96,1056,128,1152,122.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
     </section>
-    <!-- akhir contact -->
 
-    <!-- footer -->
-    <footer class="bg-primary text-white text-center pb-3">
-      <p>
-        Created With <i class="bi bi-heart-fill text-danger"></i> By
-        <a href="https://github.com/rexyb9" class="text-white fw-bold"
-          >Arkha Hamizan</a
-        >
-      </p>
-    </footer>
-    <!-- akhir footer -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,288L48,272C96,256,192,224,288,218.7C384,213,480,235,576,234.7C672,235,768,213,864,186.7C960,160,1056,128,1152,133.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+  <!-- akhir projets -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
+  <!-- contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>Contact Me</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+            <strong>Terimakasih!</strong> Pesan Anda Sudah Kami Terima.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <form name="ar-contact-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
+            </div>
+            <div class="mb-3">
+              <label for="pesan" class="form-label">Pesan</label>
+              <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-kirim">
+              Kirim
+            </button>
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#0d6efd" fill-opacity="1"
+        d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,240C672,213,768,139,864,117.3C960,96,1056,128,1152,122.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+  <!-- akhir contact -->
 
-    <script>
-      /*!
-       * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
-       * Copyright 2011-2023 The Bootstrap Authors
-       * Licensed under the Creative Commons Attribution 3.0 Unported License.
-       */
+  <!-- footer -->
+  <footer class="bg-primary text-white text-center pb-3">
+    <p>
+      Created With <i class="bi bi-heart-fill text-danger"></i> By
+      <a href="https://github.com/rexyb9" class="text-white fw-bold">Arkha Hamizan</a>
+    </p>
+  </footer>
+  <!-- akhir footer -->
 
-      (() => {
-        "use strict";
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 
-        const storedTheme = localStorage.getItem("theme");
+  <script>
+    /*!
+ * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+ * Copyright 2011-2023 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ */
 
-        const getPreferredTheme = () => {
-          if (storedTheme) {
-            return storedTheme;
-          }
+    (() => {
+      'use strict'
 
-          return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-        };
+      const storedTheme = localStorage.getItem('theme')
 
-        const setTheme = function (theme) {
-          if (
-            theme === "auto" &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-          ) {
-            document.documentElement.setAttribute("data-bs-theme", "dark");
-          } else {
-            document.documentElement.setAttribute("data-bs-theme", theme);
-          }
-        };
-
-        setTheme(getPreferredTheme());
-
-        const showActiveTheme = (theme, focus = false) => {
-          const themeSwitcher = document.querySelector("#bd-theme");
-
-          if (!themeSwitcher) {
-            return;
-          }
-
-          const themeSwitcherText = document.querySelector("#bd-theme-text");
-          const activeThemeIcon = document.querySelector(".theme-icon-active");
-          const btnToActive = document.querySelector(
-            `[data-bs-theme-value="${theme}"]`
-          );
-          const svgOfActiveBtn =
-            btnToActive.querySelector("i").dataset.themeIcon;
-
-          document
-            .querySelectorAll("[data-bs-theme-value]")
-            .forEach((element) => {
-              element.classList.remove("active");
-              element.setAttribute("aria-pressed", "false");
-            });
-
-          activeThemeIcon.classList.remove(
-            activeThemeIcon.dataset.themeIconActive
-          );
-          btnToActive.classList.add("active");
-          activeThemeIcon.classList.add(iconOfActiveBtn);
-          activeThemeIcon.dataset.iconActive = iconOfActiveBtn;
-
-          if (focus) {
-            themeSwitcher.focus();
-          }
-        };
-
-        window
-          .matchMedia("(prefers-color-scheme: dark)")
-          .addEventListener("change", () => {
-            if (storedTheme !== "light" || storedTheme !== "dark") {
-              setTheme(getPreferredTheme());
-            }
-          });
-
-        window.addEventListener("DOMContentLoaded", () => {
-          showActiveTheme(getPreferredTheme());
-
-          document
-            .querySelectorAll("[data-bs-theme-value]")
-            .forEach((toggle) => {
-              toggle.addEventListener("click", () => {
-                const theme = toggle.getAttribute("data-bs-theme-value");
-                localStorage.setItem("theme", theme);
-                setTheme(theme);
-                showActiveTheme(theme, true);
-              });
-            });
-        });
-      })();
-    </script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 2000,
-      });
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
-    <script>
-      gsap.from(".img-thumbnail", { duration: 2, rotationX: 360 });
-      gsap.from(".navbar", {
-        duration: 1.5,
-        opacity: 0,
-        y: "-100%",
-        ease: "bounce",
-      });
-      gsap.from(".display-4", { delay: 1, duration: 1, opacity: 0, x: "-10%" });
-
-      gsap.registerPlugin(TextPlugin);
-      gsap.to(".lead", {
-        delay: 1.5,
-        duration: 2,
-        text: "Make Website And Publish Website | Web Developer",
-      });
-
-      const galleryImages = document.querySelectorAll(".gallery-img");
-      const delayTimes = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450];
-
-      function shuffleArray(array) {
-        for (var i = array.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var temp = array[i];
-          array[i] = array[j];
-          array[j] = temp;
+      const getPreferredTheme = () => {
+        if (storedTheme) {
+          return storedTheme
         }
-        return array;
+
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
       }
-      const newDelay = shuffleArray(delayTimes);
-      galleryImages.forEach((img, i) => {
-        img.dataset.aos = "fade-up";
-        img.dataset.aosDelay = i * 50 + "";
-        // img.dataset.aosDelay = newDelay[i];
-      });
 
-      AOS.init({
-        duration: 3000,
-      });
-    </script>
+      const setTheme = function (theme) {
+        if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-bs-theme', 'dark')
+        } else {
+          document.documentElement.setAttribute('data-bs-theme', theme)
+        }
+      }
 
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzaNCBEAR7k2EM2T8Uxa4TtXw6_gIb4ZrjfTqg2baAn7kH7bpKjwY-cyBo54pDsQ2kFeQ/exec";
-      const form = document.forms["ar-contact-form"];
-      const btnKirim = document.querySelector(".btn-kirim");
-      const btnLoading = document.querySelector(".btn-loading");
-      const myAlert = document.querySelector(".my-alert");
+      setTheme(getPreferredTheme())
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        // ketika tombol submit diklik
-        // tamplikan tombol loading, hilangkan tombol kirim
-        btnLoading.classList.toggle("d-none");
-        btnKirim.classList.toggle("d-none");
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            // tamplikan tombol kirim, hilangkan tombol loading
-            btnLoading.classList.toggle("d-none");
-            btnKirim.classList.toggle("d-none");
-            // tampilkan alert
-            myAlert.classList.toggle("d-none");
-            // reset formnya
-            form.reset();
-            console.log("Success!", response);
+      const showActiveTheme = (theme, focus = false) => {
+        const themeSwitcher = document.querySelector('#bd-theme')
+
+        if (!themeSwitcher) {
+          return
+        }
+
+        const themeSwitcherText = document.querySelector('#bd-theme-text')
+        const activeThemeIcon = document.querySelector('.theme-icon-active use')
+        const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+        const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
+
+        document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+          element.classList.remove('active')
+          element.setAttribute('aria-pressed', 'false')
+        })
+
+        btnToActive.classList.add('active')
+        btnToActive.setAttribute('aria-pressed', 'true')
+        activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+        const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
+        themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+
+        if (focus) {
+          themeSwitcher.focus()
+        }
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (storedTheme !== 'light' || storedTheme !== 'dark') {
+          setTheme(getPreferredTheme())
+        }
+      })
+
+      window.addEventListener('DOMContentLoaded', () => {
+        showActiveTheme(getPreferredTheme())
+
+        document.querySelectorAll('[data-bs-theme-value]')
+          .forEach(toggle => {
+            toggle.addEventListener('click', () => {
+              const theme = toggle.getAttribute('data-bs-theme-value')
+              localStorage.setItem('theme', theme)
+              setTheme(theme)
+              showActiveTheme(theme, true)
+            })
           })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
+      })
+    })()
+  </script>
 
-    <script type="text/javascript" src="js/vanilla-tilt.min.jsx"></script>
-    <script type="text/javascript">
-      VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
-        max: 35,
-        speed: 1000,
-        glare: true,
-      });
-    </script>
-  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000,
+    });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
+  <script>
+    gsap.from(".img-thumbnail", { duration: 2, rotationX: 360 });
+    gsap.from(".navbar", {
+      duration: 1.5,
+      opacity: 0,
+      y: "-100%",
+      ease: "bounce",
+    });
+    gsap.from(".display-4", { delay: 1, duration: 1, opacity: 0, x: "-10%" });
+
+    gsap.registerPlugin(TextPlugin);
+    gsap.to(".lead", {
+      delay: 1.5,
+      duration: 2,
+      text: "Make Website And Publish Website | Web Developer",
+    });
+
+    const galleryImages = document.querySelectorAll(".gallery-img");
+    const delayTimes = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450];
+
+    function shuffleArray(array) {
+      for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      return array;
+    }
+    const newDelay = shuffleArray(delayTimes);
+    galleryImages.forEach((img, i) => {
+      img.dataset.aos = "fade-up";
+      img.dataset.aosDelay = i * 50 + "";
+      // img.dataset.aosDelay = newDelay[i];
+    });
+
+    AOS.init({
+      duration: 3000,
+    });
+  </script>
+
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbzaNCBEAR7k2EM2T8Uxa4TtXw6_gIb4ZrjfTqg2baAn7kH7bpKjwY-cyBo54pDsQ2kFeQ/exec";
+    const form = document.forms["ar-contact-form"];
+    const btnKirim = document.querySelector(".btn-kirim");
+    const btnLoading = document.querySelector(".btn-loading");
+    const myAlert = document.querySelector(".my-alert");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // ketika tombol submit diklik
+      // tamplikan tombol loading, hilangkan tombol kirim
+      btnLoading.classList.toggle("d-none");
+      btnKirim.classList.toggle("d-none");
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          // tamplikan tombol kirim, hilangkan tombol loading
+          btnLoading.classList.toggle("d-none");
+          btnKirim.classList.toggle("d-none");
+          // tampilkan alert
+          myAlert.classList.toggle("d-none");
+          // reset formnya
+          form.reset();
+          console.log("Success!", response);
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+  </script>
+
+  <script type="text/javascript" src="js/vanilla-tilt.min.jsx"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
+      max: 35,
+      speed: 1000,
+      glare: true,
+    });
+  </script>
+</body>
+
 </html>
